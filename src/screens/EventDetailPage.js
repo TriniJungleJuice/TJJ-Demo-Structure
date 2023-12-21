@@ -32,8 +32,7 @@ export function EventDetailPage(props) {
         id="content"
         style={{ display: "flex", background: "#616161", padding: 10 }}
       >
-        <Container fluid="md" style={{ backgroundColor: "#000000" }}>
-          {/* Stack the columns on mobile by making one full-width and the other half-width */}
+        <Container fluid="md">
           <Row style={{ backgroundColor: "#ff0000" }}>
             <Col xs={12} md={12} style={{ backgroundColor: "#9E9E9E" }}>
               <Card>
@@ -71,10 +70,20 @@ export function EventDetailPage(props) {
               </Card>
             </Col>
           </Row>
-          {/* Columns start at 50% wide on mobile and bump up to 33.3% wide on desktop */}
-          <Row style={{ backgroundColor: "#0000ff" }}>
-            <Col xs={6} md={4}>
-            <Card>
+          <Row style={{ backgroundColor: "#0000ff",marginTop:10 }}>
+            <Col xs={6} md={3}>
+              <Card>
+                <Card.Body>
+                  <Card.Title>Card Title </Card.Title>
+                  <Card.Text>
+                    Some quick example text to build on the card title and make
+                    up the bulk of the card's content.
+                  </Card.Text>
+                </Card.Body>
+              </Card>
+            </Col>
+            <Col xs={6} md={6}>
+              <Card>
                 <Card.Img
                   variant="top"
                   src="https://placehold.co/1000x400@2x.png"
@@ -108,43 +117,8 @@ export function EventDetailPage(props) {
                 </Card.Body>
               </Card>
             </Col>
-            <Col xs={6} md={4}>
-            <Card>
-                <Card.Img
-                  variant="top"
-                  src="https://placehold.co/1000x400@2x.png"
-                />
-                <Card.Body>
-                  <Card.Text style={{ paddingLeft: 10 }}>
-                    <Row>
-                      <Col xs={10} md={10}>
-                        <Row>Event Title</Row>
-                        <Row>Event Subtitle</Row>
-                      </Col>
-                      <Col
-                        xs={2}
-                        md={2}
-                        style={{
-                          display: "flex",
-                          alignItems: "center",
-                          justifyContent: "flex-end",
-                        }}
-                      >
-                        <Button>Book Tickets</Button>
-                      </Col>
-                    </Row>
-                    <hr />
-                    <Row style={{ paddingTop: 10 }}>
-                      ...details of the event with the relevant writeup
-                      <br />
-                      #Event #SouthAmerica
-                    </Row>
-                  </Card.Text>
-                </Card.Body>
-              </Card>
-            </Col>
-            <Col xs={6} md={4}>
-            <Card>
+            <Col xs={6} md={3}>
+              <Card>
                 <Card.Img
                   variant="top"
                   src="https://placehold.co/1000x400@2x.png"
@@ -180,7 +154,6 @@ export function EventDetailPage(props) {
             </Col>
           </Row>
 
-          {/* Columns are always 50% wide, on mobile and desktop */}
           <Row style={{ backgroundColor: "#00ff00" }}>
             <Col xs={6}>xs=6</Col>
             <Col xs={6}>xs=6</Col>
