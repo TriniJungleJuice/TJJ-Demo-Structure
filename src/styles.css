@@ -1,0 +1,19 @@
+.nav-link.active {
+    /* color: red !important; */
+    background-color: red !important;
+    border-color: red;
+  }
+
+  .nav-tabs {
+    --bs-border-color: red !important;
+  }
+
+  .nav-link {
+    color: white !important;
+    border: none !important;
+  }
+
+  .hr {
+    border: 10px solid green;
+  border-radius: 5px;
+  }
