@@ -1,5 +1,6 @@
 import React, { useState } from "react";
-import { Button, Card, Col, Container, Row } from "react-bootstrap";
+import { Button, Card, Col, Container, Image, Nav, Navbar, Row } from "react-bootstrap";
+import "../../src/styles.css";
 
 const Data = [
   {
@@ -193,6 +194,108 @@ function EventListPage() {
     }
   };
 
+  function mainNavbar() {
+    return (
+      <>
+        <Navbar
+          bg="dark"
+          data-bs-theme="dark"
+          style={{
+            width: "100%",
+            height: "12vh",
+            borderBottom: "1px solid rgb(212, 0, 0)",
+          }}
+          sticky="top"
+        >
+          <Container style={{ borderBottom: 5, borderColor: "red" }}>
+            <Navbar.Brand href="#home">
+              <Image
+                src="http://www.trinijunglejuice.com/home/menu/images/logo.png"
+                width={200}
+                height={55.8}
+              />
+            </Navbar.Brand>
+            <Nav className="me-auto">
+              <Nav.Link href="#store">Store</Nav.Link>
+              <Nav.Link href="#carnival">Carnival</Nav.Link>
+              <Nav.Link href="#events">Events</Nav.Link>
+              <Nav.Link href="#photos">Photos</Nav.Link>
+              <Nav.Link href="#videos">Videos</Nav.Link>
+              <Nav.Link href="#music">Music</Nav.Link>
+              <Nav.Link href="#news">News</Nav.Link>
+              <Nav.Link href="#contact">Contact</Nav.Link>
+            </Nav>
+          </Container>
+        </Navbar>
+      </>
+    );
+  }
+
+  function footer() {
+    return (
+      <div
+        style={{
+          height: "35vh",
+          backgroundColor: "#212121",
+          width: "100%",
+          display: "flex",
+          flexDirection: "column",
+          paddingLeft: 20,
+          paddingRight: 20,
+        }}
+      >
+        <div
+          style={{
+            display: "flex",
+            height: "15%",
+            color: "blue",
+            // backgroundColor: "yellow",
+            alignItems: "center",
+          }}
+        >
+           <marquee style={{ color: 'red' }}>
+           Disclaimer Notice: TriniJungleJuice.com is not responsible for the
+            cancellation, change of date or venue of events. Always check with
+            the event promoter(s) for accuracy of the information provided
+            herein. We are not responsible for typos, accuracy, and/or other
+            errors and omissions in the information provided by other parties.
+            TriniJungleJuice.com is not affiliated with any promotions or
+            promoters, unless specifically stated.
+            </marquee>
+        </div>
+        <div style={{ display: 'flex', height: "70%", flexDirection: 'row' }}>
+          <div style={{ display: 'flex', width: "33%", flexDirection: 'column', justifyContent: 'center', alignItems: 'center' }}>
+          <Image
+                src={require('../assets/tjj-logo.png')}
+                // width={200}
+                // height={55.8}
+              />
+          </div>
+          <div style={{ display: 'flex', width: "33%", flexDirection: 'row' }}>
+          <div style={{ display: 'flex', width: "50%", flexDirection: 'column', justifyContent:'center',alignItems: 'center' }}>
+            <a href="#">Store</a>
+            <a href="#">Carnival</a>
+            <a href="#">Events</a>
+            <a href="#">Photos</a>
+          </div>
+          <div style={{ display: 'flex', width: "50%", flexDirection: 'column', justifyContent:'center',alignItems: 'center' }}>
+          <a href="#">Videos</a>
+            <a href="#">Music</a>
+            <a href="#">News</a>
+            <a href="#">Contact</a>
+          </div>
+          </div>
+          <div style={{ display: 'flex', width: "34%", color: 'white', flexDirection: 'column', justifyContent:'center',alignItems: 'center' }}>
+            221B, Baker Street, 90265
+          </div>
+        </div>
+        <div style={{ display: 'flex', height: "15%", color: 'gray', justifyContent: 'center', alignItems: 'center' }}>
+          {'\u00A9'} 2023 Copyright: Trini Jungle Juice | Made by Renderbit Technologies
+        </div>
+      </div>
+    );
+  }
+
   return (
     <div
       style={{
@@ -202,18 +305,7 @@ function EventListPage() {
         flexDirection: "column",
       }}
     >
-      <div
-        id="header"
-        style={{
-          display: "flex",
-          background: "#E0E0E0",
-          minHeight: "13vh",
-          alignItems: "center",
-          justifyContent: "center",
-        }}
-      >
-        Header
-      </div>
+     {mainNavbar()}
       <div
         id="content"
         style={{
@@ -517,18 +609,7 @@ function EventListPage() {
           </Row>
         </Container>
       </div>
-      <div
-        id="footer"
-        style={{
-          display: "flex",
-          background: "#E0E0E0",
-          minHeight: "13vh",
-          alignItems: "center",
-          justifyContent: "center",
-        }}
-      >
-        Footer
-      </div>
+   {footer()}
     </div>
   );
 }
