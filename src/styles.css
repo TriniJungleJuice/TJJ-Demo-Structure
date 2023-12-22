@@ -1,19 +1,64 @@
 .nav-link.active {
-    /* color: red !important; */
-    background-color: red !important;
-    border-color: red;
-  }
+  /* color: red !important; */
+  background-color: red !important;
+  border-color: red;
+}
 
-  .nav-tabs {
-    --bs-border-color: red !important;
-  }
+.nav-tabs {
+  --bs-border-color: red !important;
+}
 
-  .nav-link {
-    color: white !important;
-    border: none !important;
-  }
+.nav-link {
+  color: white !important;
+  border: none !important;
+}
 
-  .hr {
-    border: 10px solid green;
+.hr {
+  border: 1px solid #fd0b0b;
   border-radius: 5px;
-  }
+}
+
+.carousel-indicators {
+  bottom: -45px;
+}
+
+.carousel-indicators button.active {
+  background-color: red;
+}
+
+.carousel-control-next {
+  right: -60px;
+}
+
+.carousel-control-prev {
+  left: -55px;
+}
+
+.carousel-control-prev-icon {
+  background-image: url("./assets/back-arrow-4845.png") !important;
+}
+
+.carousel-control-next-icon {
+  background-image: url("./assets/front-arrow-4845.png") !important;
+}
+
+.red-colour {
+  color: red;
+}
+
+.navbar {
+  /* --bs-dark-rgb: 33, 33, 33; */
+  --bs-dark-rgb: 0, 0, 0;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+  font-size: 18px;
+  transition: color .25s ease;
+}
+
+a:hover {
+  text-decoration: none;
+  color: red;
+}
