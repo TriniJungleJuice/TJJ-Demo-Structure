@@ -129,7 +129,7 @@ export default function EventDemoPage(props) {
           backgroundColor: "#424242",
         }}
       >
-        <Card.Img variant="top" src="https://placehold.co/320x250@2x.png" />
+        <Card.Img variant="top" src="https://www.trinijunglejuice.com/home/images/carnival/berlin/berlin_carnival-2.jpg" />
         <Card.Body style={{ color: "#ffffff" }}>
           <Card.Title>Christmas Carnival 2023</Card.Title>
           <Card.Text>
@@ -153,20 +153,26 @@ export default function EventDemoPage(props) {
           <Row>
             <Col xs={4} md={4}>
               <Image
-                src="https://placehold.co/100x200@2x.png"
+                src="http://www.trinijunglejuice.com/events/2023/skn-sugarmas-national-events-calendar-2023.jpg"
                 text="First slide"
+                width={200}
+                height={400}
               />
             </Col>
             <Col xs={4} md={4}>
-              <Image
-                src="https://placehold.co/100x200@2x.png"
+            <Image
+                src="http://www.trinijunglejuice.com/events/2023/skn-sugarmas-privates-events-calendar-2023.jpg"
                 text="First slide"
+                width={200}
+                height={400}
               />
             </Col>
             <Col xs={4} md={4}>
-              <Image
-                src="https://placehold.co/100x200@2x.png"
+            <Image
+                src="https://4f14f3f2b2e5fd1c43c0-19fdc616b209d38d8f477bc6e666e66f.ssl.cf1.rackcdn.com/events/gala-vant-midnight-masquerade-272605-pXmvMj6Ngk.jpg"
                 text="First slide"
+                width={200}
+                height={400}
               />
             </Col>
           </Row>
@@ -239,10 +245,27 @@ export default function EventDemoPage(props) {
           <Row>
             <Col xs={12} md={12}>
               <Card style={{ backgroundColor: "#212121" }}>
-                <Card.Img
-                  variant="top"
-                  src="https://placehold.co/1000x400@2x.png"
+              <div
+                  style={{
+                    backgroundImage: `url("https://www.trinijunglejuice.com/events/2024/rise-and-toast-jan14-2024.jpg")`,
+                    filter: "blur(8px)",
+                    backgroundPosition: "center",
+                    backgroundRepeat: "no-repeat",
+                    backgroundSize: "cover",
+                    height:400,
+                  }}
                 />
+                  <Card.Img
+                    variant="top"
+                    src="https://www.trinijunglejuice.com/events/2024/rise-and-toast-jan14-2024.jpg"
+                    style={{
+                      height: 400,
+                      width: "auto",
+                      display: "flex",
+                      alignSelf: "center",
+                      position:"absolute"
+                    }}
+                  />
                 <Card.Body>
                   <Card.Text style={{ paddingLeft: 10, color: "#ffffff" }}>
                     <Row>
@@ -372,37 +395,37 @@ export default function EventDemoPage(props) {
                 <Card.Body style={{ paddingLeft: 20, color: "#ffffff" }}>
                   <Card.Title>Featured Photos</Card.Title>
                   <Image
-                    src="https://placehold.co/190x190@2x.png"
+                    src="https://www.trinijunglejuice.com/home/images/carnival/berlin/berlin_carnival-10.jpg"
                     width={190}
                     height={190}
                     style={{ margin: 2 }}
                   />
                   <Image
-                    src="https://placehold.co/190x190@2x.png"
+                    src="https://www.trinijunglejuice.com/home/images/carnival/berlin/berlin_carnival-2.jpg"
                     width={190}
                     height={190}
                     style={{ margin: 2 }}
                   />
                   <Image
-                    src="https://placehold.co/190x190@2x.png"
+                    src="https://www.trinijunglejuice.com/home/images/carnival/berlin/berlin_carnival-6.jpg"
                     width={190}
                     height={190}
                     style={{ margin: 2 }}
                   />
                   <Image
-                    src="https://placehold.co/190x190@2x.png"
+                    src="https://www.trinijunglejuice.com/home/images/carnival/berlin/berlin_carnival-5.jpg"
                     width={190}
                     height={190}
                     style={{ margin: 2 }}
                   />
                   <Image
-                    src="https://placehold.co/190x190@2x.png"
+                    src="https://www.trinijunglejuice.com/home/images/carnival/berlin/berlin_carnival-1.jpg"
                     width={190}
                     height={190}
                     style={{ margin: 2 }}
                   />
                   <Image
-                    src="https://placehold.co/190x190@2x.png"
+                    src="https://www.trinijunglejuice.com/home/images/carnival/berlin/berlin_carnival-9.jpg"
                     width={190}
                     height={190}
                     style={{ margin: 2 }}
@@ -427,7 +450,7 @@ export default function EventDemoPage(props) {
                   <Card.Title>Location Details</Card.Title>
                   <Card.Img
                     variant="top"
-                    src="https://placehold.co/300x300@2x.png"
+                    src="https://i.stack.imgur.com/8KmHl.png"
                   />
                   <Card.Text>
                     <br />
