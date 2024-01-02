@@ -1,6 +1,20 @@
 import React, { useState } from "react";
-import { Button, Card, Col, Container, Image, Nav, Navbar, Row } from "react-bootstrap";
+import {
+  Button,
+  Card,
+  Col,
+  Container,
+  Image,
+  Nav,
+  Navbar,
+  Row,
+} from "react-bootstrap";
 import "../../src/styles.css";
+import Form from "react-bootstrap/Form";
+import DatePicker from "react-datepicker";
+import "react-datepicker/dist/react-datepicker.css";
+import "react-datepicker/dist/react-datepicker-cssmodules.css";
+import { IoIosArrowUp,IoIosArrowDown } from "react-icons/io";
 
 const Data = [
   {
@@ -177,9 +191,129 @@ const Data = [
   },
 ];
 
+const cities = [
+  {
+    country: "Caribbean Islands",
+    cities: [
+      {
+        name: "Antigua",
+      },
+      {
+        name: "Bahamas",
+      },
+      {
+        name: " Barbados",
+      },
+      {
+        name: " Cayman Islands",
+      },
+      {
+        name: " Dominica",
+      },
+      {
+        name: " Grenada",
+      },
+      {
+        name: " Guadeloupe",
+      },
+      {
+        name: " Guyana",
+      },
+      {
+        name: " Haiti",
+      },
+      {
+        name: " Jamaica",
+      },
+      {
+        name: " Martinique",
+      },
+      {
+        name: " Puerto Rico",
+      },
+      {
+        name: " St. Lucia",
+      },
+      {
+        name: " St. Maarten",
+      },
+      {
+        name: " St. Vincent",
+      },
+      {
+        name: " Trinidad & Tobago",
+      },
+      {
+        name: " Turks & Caicos",
+      },
+      {
+        name: " U.S. Virgin Islands",
+      },
+    ],
+  },
+  {
+    country: "North America",
+    cities: [
+      {
+        name: " Atlanta",
+      },
+      {
+        name: " Bermuda",
+      },
+      {
+        name: " Houston",
+      },
+      {
+        name: " Miami | Orlando | Tampa",
+      },
+      {
+        name: " New York",
+      },
+      {
+        name: " Other (USA)",
+      },
+      {
+        name: " Toronto",
+      },
+      {
+        name: "Washington DC | DMV",
+      },
+    ],
+  },
+  {
+    country: "Europe",
+    cities: [
+      {
+        name: "France",
+      },
+      {
+        name: " Germany",
+      },
+      {
+        name: " London",
+      },
+      {
+        name: " Spain",
+      },
+    ],
+  },
+  {
+    country: "Rest of World",
+    cities: [
+      {
+        name: "Dubai",
+      },
+      {
+        name: "Mexico",
+      },
+    ],
+  },
+];
+
 function EventListPage() {
   const [opened, setOpened] = useState([]);
   const [show, setShow] = React.useState(false);
+  const [calendarValue, onChangeCalendarValue] = useState(new Date());
 
   const handleClick = (index) => {
     if (opened.includes(index)) {
@@ -253,44 +387,86 @@ function EventListPage() {
             alignItems: "center",
           }}
         >
-           <marquee style={{ color: 'red' }}>
-           Disclaimer Notice: TriniJungleJuice.com is not responsible for the
+          <marquee style={{ color: "red" }}>
+            Disclaimer Notice: TriniJungleJuice.com is not responsible for the
             cancellation, change of date or venue of events. Always check with
             the event promoter(s) for accuracy of the information provided
             herein. We are not responsible for typos, accuracy, and/or other
             errors and omissions in the information provided by other parties.
             TriniJungleJuice.com is not affiliated with any promotions or
             promoters, unless specifically stated.
-            </marquee>
+          </marquee>
         </div>
-        <div style={{ display: 'flex', height: "70%", flexDirection: 'row' }}>
-          <div style={{ display: 'flex', width: "33%", flexDirection: 'column', justifyContent: 'center', alignItems: 'center' }}>
-          <Image
-                src={require('../assets/tjj-logo.png')}
-                // width={200}
-                // height={55.8}
-              />
+        <div style={{ display: "flex", height: "70%", flexDirection: "row" }}>
+          <div
+            style={{
+              display: "flex",
+              width: "33%",
+              flexDirection: "column",
+              justifyContent: "center",
+              alignItems: "center",
+            }}
+          >
+            <Image
+              src={require("../assets/tjj-logo.png")}
+              // width={200}
+              // height={55.8}
+            />
           </div>
-          <div style={{ display: 'flex', width: "33%", flexDirection: 'row' }}>
-          <div style={{ display: 'flex', width: "50%", flexDirection: 'column', justifyContent:'center',alignItems: 'center' }}>
-            <a href="#">Store</a>
-            <a href="#">Carnival</a>
-            <a href="#">Events</a>
-            <a href="#">Photos</a>
+          <div style={{ display: "flex", width: "33%", flexDirection: "row" }}>
+            <div
+              style={{
+                display: "flex",
+                width: "50%",
+                flexDirection: "column",
+                justifyContent: "center",
+                alignItems: "center",
+              }}
+            >
+              <a href="#">Store</a>
+              <a href="#">Carnival</a>
+              <a href="#">Events</a>
+              <a href="#">Photos</a>
+            </div>
+            <div
+              style={{
+                display: "flex",
+                width: "50%",
+                flexDirection: "column",
+                justifyContent: "center",
+                alignItems: "center",
+              }}
+            >
+              <a href="#">Videos</a>
+              <a href="#">Music</a>
+              <a href="#">News</a>
+              <a href="#">Contact</a>
+            </div>
           </div>
-          <div style={{ display: 'flex', width: "50%", flexDirection: 'column', justifyContent:'center',alignItems: 'center' }}>
-          <a href="#">Videos</a>
-            <a href="#">Music</a>
-            <a href="#">News</a>
-            <a href="#">Contact</a>
-          </div>
-          </div>
-          <div style={{ display: 'flex', width: "34%", color: 'white', flexDirection: 'column', justifyContent:'center',alignItems: 'center' }}>
+          <div
+            style={{
+              display: "flex",
+              width: "34%",
+              color: "white",
+              flexDirection: "column",
+              justifyContent: "center",
+              alignItems: "center",
+            }}
+          >
             221B, Baker Street, 90265
           </div>
         </div>
-        <div style={{ display: 'flex', height: "15%", color: 'gray', justifyContent: 'center', alignItems: 'center' }}>
-          {'\u00A9'} 2023 Copyright: Trini Jungle Juice | Made by Renderbit Technologies
+        <div
+          style={{
+            display: "flex",
+            height: "15%",
+            color: "gray",
+            justifyContent: "center",
+            alignItems: "center",
+          }}
+        >
+          {"\u00A9"} 2023 Copyright: Trini Jungle Juice | Made by Renderbit
+          Technologies
         </div>
       </div>
     );
@@ -305,7 +481,7 @@ function EventListPage() {
         flexDirection: "column",
       }}
     >
-     {mainNavbar()}
+      {mainNavbar()}
       <div
         id="content"
         style={{
@@ -387,62 +563,66 @@ function EventListPage() {
                 style={{
                   backgroundColor: "#212121",
                 }}
-                onClick={() => handleClick(1)}
               >
                 <Card.Body style={{ color: "#FBFCFA" }}>
-                  <Row>
-                    <Col xs={3} md={1}>
-                      <Card.Img
-                        style={{ width: "1rem" }}
-                        src="https://www.pngkit.com/png/full/273-2739733_white-drop-down-arrow.png"
-                      />
-                    </Col>
-                    <Col xs={6} md={7}>
-                      Date
-                    </Col>
-                    <Col xs={3} md={3}>
-                      Clear
-                    </Col>
-                  </Row>
+                  <div
+                    style={{ display: "flex", flexDirection: "row" }}
+                    onClick={() => handleClick(1)}
+                  >
+                    <div style={{ width: "10%" }}>
+                      {
+                        opened.includes(1)?
+                        <IoIosArrowUp size={20}/>
+                        :
+                        <IoIosArrowDown size={20}/>
+                      }
+                    </div>
+                    <div style={{ width: "78%" }}>Date</div>
+                    <div style={{ width: "12%" }}>Clear</div>
+                  </div>
                   {opened.includes(1) ? (
                     <>
                       <div
                         style={{
                           marginTop: 10,
-                          display: "flex",
-                          flexDirection: "row",
                         }}
                       >
-                        <Button
-                          style={{
-                            backgroundColor: "transparent",
-                            borderColor: "red",
-                            color: "red",
-                            marginLeft: "0.5px",
-                          }}
-                        >
-                          Today
-                        </Button>
-                        <Button
-                          style={{
-                            backgroundColor: "transparent",
-                            borderColor: "red",
-                            color: "red",
-                            marginLeft: "10px",
-                          }}
-                        >
-                          Tomorrow
-                        </Button>
-                        <Button
-                          style={{
-                            backgroundColor: "transparent",
-                            borderColor: "red",
-                            color: "red",
-                            marginLeft: "10px",
-                          }}
-                        >
-                          This Weekend
-                        </Button>
+                        <DatePicker
+                          showIcon
+                          selected={calendarValue}
+                          onChange={(date) => onChangeCalendarValue(date)}
+                          icon={
+                            <svg
+                              xmlns="http://www.w3.org/2000/svg"
+                              width="1em"
+                              height="1em"
+                              viewBox="0 0 48 48"
+                            >
+                              <mask id="ipSApplication0">
+                                <g
+                                  fill="none"
+                                  stroke="#fff"
+                                  strokeLinejoin="round"
+                                  strokeWidth="4"
+                                >
+                                  <path
+                                    strokeLinecap="round"
+                                    d="M40.04 22v20h-32V22"
+                                  ></path>
+                                  <path
+                                    fill="#fff"
+                                    d="M5.842 13.777C4.312 17.737 7.263 22 11.51 22c3.314 0 6.019-2.686 6.019-6a6 6 0 0 0 6 6h1.018a6 6 0 0 0 6-6c0 3.314 2.706 6 6.02 6c4.248 0 7.201-4.265 5.67-8.228L39.234 6H8.845l-3.003 7.777Z"
+                                  ></path>
+                                </g>
+                              </mask>
+                              <path
+                                fill="red"
+                                d="M0 0h48v48H0z"
+                                mask="url(#ipSApplication0)"
+                              ></path>
+                            </svg>
+                          }
+                        />
                       </div>
                     </>
                   ) : (
@@ -455,23 +635,23 @@ function EventListPage() {
                   backgroundColor: "#212121",
                   marginTop: 10,
                 }}
-                onClick={() => handleClick(2)}
               >
                 <Card.Body style={{ color: "#FBFCFA" }}>
-                  <Row>
-                    <Col xs={3} md={1}>
-                      <Card.Img
-                        style={{ width: "1rem" }}
-                        src="https://www.pngkit.com/png/full/273-2739733_white-drop-down-arrow.png"
-                      />
-                    </Col>
-                    <Col xs={6} md={7}>
-                      Price
-                    </Col>
-                    <Col xs={3} md={3}>
-                      Clear
-                    </Col>
-                  </Row>
+                  <div
+                    style={{ display: "flex", flexDirection: "row" }}
+                    onClick={() => handleClick(2)}
+                  >
+                    <div style={{ width: "10%" }}>
+                    {
+                        opened.includes(2)?
+                        <IoIosArrowUp size={20}/>
+                        :
+                        <IoIosArrowDown size={20}/>
+                      }
+                    </div>
+                    <div style={{ width: "78%" }}>Price</div>
+                    <div style={{ width: "12%" }}>Clear</div>
+                  </div>
                   {opened.includes(2) ? (
                     <>
                       <div
@@ -479,50 +659,40 @@ function EventListPage() {
                           marginTop: 10,
                           display: "flex",
                           flexDirection: "row",
+                          width: "100%",
                         }}
                       >
-                        <Button
+                        <div
                           style={{
-                            backgroundColor: "transparent",
-                            borderColor: "red",
+                            marginRight: 10,
+                            width: "10%",
                             color: "red",
-                            marginLeft: "0.5px",
+                            fontWeight: "500",
                           }}
                         >
                           Free
-                        </Button>
-                        <Button
+                        </div>
+                        <Form.Range
                           style={{
-                            backgroundColor: "transparent",
-                            borderColor: "red",
-                            color: "red",
-                            marginLeft: "10px",
+                            width: "50%",
+                            display: "flex",
+                            alignItems: "center",
                           }}
-                        >
-                          0-500
-                        </Button>
-                        <Button
+                          min={0}
+                          max={2000}
+                          step={100}
+                          onChange={(e) => console.log(e.target.value)}
+                        />
+                        <div
                           style={{
-                            backgroundColor: "transparent",
-                            borderColor: "red",
+                            marginLeft: 10,
+                            width: "30%",
                             color: "red",
-                            marginLeft: "10px",
-                          }}
-                        >
-                          501-2000
-                        </Button>
-                      </div>
-                      <div style={{ marginTop: 10 }}>
-                        <Button
-                          style={{
-                            backgroundColor: "transparent",
-                            borderColor: "red",
-                            color: "red",
-                            marginLeft: "0.5px",
+                            fontWeight: "500",
                           }}
                         >
                           Above 2000
-                        </Button>
+                        </div>
                       </div>
                     </>
                   ) : (
@@ -535,70 +705,70 @@ function EventListPage() {
                   backgroundColor: "#212121",
                   marginTop: 10,
                 }}
-                onClick={() => handleClick(3)}
               >
                 <Card.Body style={{ color: "#FBFCFA" }}>
-                  <Row>
-                    <Col xs={3} md={1}>
-                      <Card.Img
-                        style={{ width: "1rem" }}
-                        src="https://www.pngkit.com/png/full/273-2739733_white-drop-down-arrow.png"
-                      />
-                    </Col>
-                    <Col xs={6} md={7}>
-                      Place
-                    </Col>
-                    <Col xs={3} md={3}>
-                      Clear
-                    </Col>
-                  </Row>
+                  <div
+                    style={{ display: "flex", flexDirection: "row" }}
+                    onClick={() => handleClick(3)}
+                  >
+                    <div style={{ width: "10%" }}>
+                    {
+                        opened.includes(3)?
+                        <IoIosArrowUp size={20}/>
+                        :
+                        <IoIosArrowDown size={20}/>
+                      }
+                    </div>
+                    <div style={{ width: "78%" }}>Place</div>
+                    <div style={{ width: "12%" }}>Clear</div>
+                  </div>
                   {opened.includes(3) ? (
                     <>
-                      <Row
+                      <div
                         style={{
                           marginTop: 10,
-                          color: "red",
-                          marginLeft: "0.5px",
+                          display: "flex",
+                          flexDirection: "column",
+                          paddingLeft: "0.5px",
                         }}
                       >
-                        Caribbean Islands
-                      </Row>
-                      <Row
-                        style={{
-                          marginTop: 10,
-                          color: "red",
-                          marginLeft: "0.5px",
-                        }}
-                      >
-                        North America
-                      </Row>
-                      <Row
-                        style={{
-                          marginTop: 10,
-                          color: "red",
-                          marginLeft: "0.5px",
-                        }}
-                      >
-                        Europe
-                      </Row>
-                      <Row
-                        style={{
-                          marginTop: 10,
-                          color: "red",
-                          marginLeft: "0.5px",
-                        }}
-                      >
-                        Dubai
-                      </Row>
-                      <Row
-                        style={{
-                          marginTop: 10,
-                          color: "red",
-                          marginLeft: "0.5px",
-                        }}
-                      >
-                        Mexico
-                      </Row>
+                        {cities.map((item) => {
+                          return (
+                            <>
+                              <div
+                                style={{
+                                  color: "#fff",
+                                  fontWeight: "700",
+                                  fontSize: "22px",
+                                }}
+                              >
+                                {item.country}
+                              </div>
+                              <div
+                                style={{
+                                  marginTop: 10,
+                                }}
+                              >
+                                {item.cities.map((d) => {
+                                  return (
+                                    <Button
+                                      style={{
+                                        backgroundColor: "transparent",
+                                        borderColor: "red",
+                                        color: "red",
+                                        marginLeft: "10px",
+                                        marginBottom: "10px",
+                                      }}
+                                    >
+                                      {d.name}
+                                    </Button>
+                                  );
+                                })}
+                              </div>
+                            </>
+                          );
+                        })}
+                      </div>
                     </>
                   ) : (
                     <></>
@@ -609,7 +779,7 @@ function EventListPage() {
           </Row>
         </Container>
       </div>
-   {footer()}
+      {footer()}
     </div>
   );
 }
