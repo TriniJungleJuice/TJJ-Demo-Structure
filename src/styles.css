@@ -138,3 +138,211 @@ input:focus{
 .carousel-slider-box {
   background: linear-gradient(to right, rgb(0, 0, 0) 20%, transparent);
 }
+
+.video-block {
+  position: relative;
+  overflow: hidden;
+}
+
+.video-block .video-thumb {
+  max-width: 100%;
+  position: relative;
+  overflow: hidden;
+  margin-bottom: 15px;
+}
+
+.video-block .video-thumb img {
+  display: block;
+  width: 100%;
+  -webkit-transition: all .3s ease-out;
+  -o-transition: all .3s ease-out;
+  transition: all .3s ease-out;
+}
+
+.video-block:hover .video-thumb img {
+  -webkit-transform: scale(1.1);
+  -ms-transform: scale(1.1);
+  transform: scale(1.1);
+}
+
+.video-block .video-thumb::after {
+  position: absolute;
+  content: '';
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(50%, transparent), to(rgba(0, 0, 0, 0.8)));
+  background: -webkit-linear-gradient(top, transparent 50%, rgba(0, 0, 0, 0.8) 100%);
+  background: -o-linear-gradient(top, transparent 50%, rgba(0, 0, 0, 0.8) 100%);
+  background: linear-gradient(to bottom, transparent 50%, rgba(0, 0, 0, 0.8) 100%);
+  -webkit-transition: all 0.4s ease;
+  -o-transition: all 0.4s ease;
+  transition: all 0.4s ease;
+}
+
+/* Video block Effects */
+.video-block .icon,
+.video-block .title {
+  margin: 0;
+  position: absolute;
+}
+
+.video-block:after,
+.video-block:before {
+  height: 50%;
+  background: rgba(0, 0, 0, .5);
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  transform-origin: 100% 0;
+  transform: rotateZ(90deg);
+}
+
+.video-block .icon {
+  padding: 7px 5px;
+  list-style: none;
+  background: #ff0000;
+  top: -100%;
+  right: 0;
+  z-index: 2;
+  transition: all .3s ease .2s
+}
+
+.video-block:hover .icon {
+  top: 0;
+}
+
+.video-block .icon li {
+  display: block;
+  margin: 10px 0;
+}
+
+.video-block .icon li a {
+  display: block;
+  width: 35px;
+  height: 35px;
+  line-height: 35px;
+  border-radius: 10px;
+  font-size: 18px;
+  color: #fff;
+  transition: all .3s ease 0s;
+  text-align: center;
+}
+
+.video-block .icon li a,
+.video-block .icon a:hover {
+  border-radius: 50%
+}
+
+.video-block .icon li a:hover {
+  color: #fff !important;
+  box-shadow: 0 0 10px #000 inset, 0 0 0 3px #fff
+}
+
+/* Text Info Block START */
+
+.text-info-block {
+  position: relative;
+  overflow: hidden;
+}
+
+.text-info-block .text-info-thumb {
+  max-width: 100%;
+  position: relative;
+  overflow: hidden;
+  margin-bottom: 15px;
+}
+
+.text-info-block .text-info-thumb img {
+  display: block;
+  width: 100%;
+  -webkit-transition: all .3s ease-out;
+  -o-transition: all .3s ease-out;
+  transition: all .3s ease-out;
+}
+
+.text-info-block:hover .text-info-thumb img {
+  -webkit-transform: scale(1.1);
+  -ms-transform: scale(1.1);
+  transform: scale(1.1);
+}
+
+.text-info-block .text-info-thumb::after {
+  position: absolute;
+  content: '';
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(50%, transparent), to(rgba(0, 0, 0, 0.8)));
+  background: -webkit-linear-gradient(top, transparent 50%, rgba(0, 0, 0, 0.8) 100%);
+  background: -o-linear-gradient(top, transparent 50%, rgba(0, 0, 0, 0.8) 100%);
+  background: linear-gradient(to bottom, transparent 50%, rgba(0, 0, 0, 0.8) 100%);
+  -webkit-transition: all 0.4s ease;
+  -o-transition: all 0.4s ease;
+  transition: all 0.4s ease;
+}
+
+/* Video block Effects */
+.text-info-block .icon,
+.text-info-block .title {
+  margin: 0;
+  position: absolute;
+}
+
+.text-info-block:after,
+.text-info-block:before {
+  height: 50%;
+  background: rgba(0, 0, 0, .5);
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  transform-origin: 100% 0;
+  transform: rotateZ(90deg);
+}
+
+.text-info-block .icon {
+  padding: 7px 5px;
+  list-style: none;
+  background: #ff0000;
+  top: -100%;
+  right: 0;
+  z-index: 2;
+  transition: all .3s ease .2s
+}
+
+.text-info-block:hover .icon {
+  top: 0;
+}
+
+.text-info-block .icon li {
+  display: block;
+  margin: 10px 0;
+}
+
+.text-info-block .icon li a {
+  display: block;
+  width: 35px;
+  height: 35px;
+  line-height: 35px;
+  border-radius: 10px;
+  font-size: 18px;
+  color: #fff;
+  transition: all .3s ease 0s;
+  text-align: center;
+}
+
+.text-info-blockk .icon li a,
+.text-info-block .icon a:hover {
+  border-radius: 50%
+}
+
+.text-info-block .icon li a:hover {
+  color: #fff !important;
+  box-shadow: 0 0 10px #000 inset, 0 0 0 3px #fff
+}
+
+/* Text Info Block END */
