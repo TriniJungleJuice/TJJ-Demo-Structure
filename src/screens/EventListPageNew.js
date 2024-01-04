@@ -333,7 +333,7 @@ function EventListPageNew() {
   const slickSliderSettings = {
     dots: true,
     infinite: true,
-    speed: 500,
+    speed: 1000,
     slidesToShow: 1,
     slidesToScroll: 1,
     height: "100vh",
@@ -362,61 +362,52 @@ function EventListPageNew() {
                   flexDirection: "column",
                   justifyContent: "center",
                   height: "100vh",
-                  width: '100%'
+                  width: "100%",
                 }}
               >
-                <div style={{ width: '50%', background: 'red' }}>
-                <h3>
-                  <span className="badge bg-warning text-dark">New</span>
-                </h3>
-                <h1
-                  style={{
-                    color: "white",
-                    fontFamily: "Poppins",
-                    fontWeight: "600",
-                    textTransform: "uppercase",
-                  }}
-                >
-                  Carribean Event - 2024
-                </h1>
-                <div
-                  className="slide-info"
-                  data-animation-in="fadeInUp"
-                  data-delay-in="1"
-                >
-                  <span>2024 | </span> <span className="radius">+18</span>{" "}
-                  <span>| All day</span>
-                </div>
-                <p data-animation-in="fadeInUp" data-delay-in="1">
-                  Lorem Ipsum is simply dummy text of the printing and
-                  typesetting industry. Lorem Ipsum has been the industry's
-                  standard dummy text ever since the 1500s.
-                </p>
-                <div
-                  className="slider-buttons d-flex align-items-center"
-                  data-animation-in="fadeInUp"
-                  data-delay-in="1"
-                >
-                  <a
-                    className="btn hvr-sweep-to-right"
-                    href="watch-movie.html"
-                    tabIndex="0"
+                <div style={{ width: "50%", marginLeft: "8%" }}>
+                  <h3>
+                    <span className="badge bg-warning text-dark">New</span>
+                  </h3>
+                  <h1 className="head fadeInUp animated">
+                    Carribean Event - 2024
+                  </h1>
+                  <div
+                    className="slide-info fadeInUp animated"
+                    data-animation-in="fadeInUp"
+                    data-delay-in="1"
                   >
-                    <i aria-hidden="true" className="fa fa-play mr-2"></i>
-                    Buy Tickets
-                  </a>{" "}
-                  <a
-                    className="btn hvr-sweep-to-right ml-3"
-                    href="#"
-                    tabIndex="0"
+                    <span>2024 | </span> <span className="radius">+18</span>{" "}
+                    <span>| All day</span>
+                  </div>
+                  <p
+                    data-animation-in="fadeInUp"
+                    data-delay-in="1"
+                    className="slide-info fadeInUp animated"
                   >
-                    <i className="fas fa-plus mr-2"></i>Event Details
-                  </a>
+                    Lorem Ipsum is simply dummy text of the printing and
+                    typesetting industry. Lorem Ipsum has been the industry's
+                    standard dummy text ever since the 1500s.
+                  </p>
+                  <div
+                    className="slider-buttons"
+                    data-animation-in="fadeInUp"
+                    data-delay-in="1"
+                  >
+                    <div className="btns hvr-sweep-to-right" tabIndex="0">
+                      <i className="fa fa-play mr-2"></i>
+                      Buy Tickets
+                    </div>{" "}
+                    <div
+                      className="btns hvr-sweep-to-right"
+                      tabIndex="0"
+                      style={{ marginLeft: 10 }}
+                    >
+                      <i className="fas fa-plus mr-2"></i>Event Details
+                    </div>
+                  </div>
                 </div>
-                </div>
-                <div>
-
-                </div>
+                <div></div>
               </Col>
             </Row>
           </div>
