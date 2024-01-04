@@ -122,3 +122,19 @@ top: 10px !important;
 input:focus{
   outline: none !important;
 }
+
+.slick-bg.bg-1 {
+  background-image: url(./assets/slider/slider1.jpg);
+}
+
+.slick-bg.bg-2 {
+  background-image: url(./assets/slider/slider2.jpg);
+}
+
+.slick-bg.bg-3 {
+  background-image: url(./assets/slider/slider3.jpg);
+}
+
+.carousel-slider-box {
+  background: linear-gradient(to right, rgb(0, 0, 0) 20%, transparent);
+}
