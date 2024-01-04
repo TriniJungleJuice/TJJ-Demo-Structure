@@ -501,7 +501,7 @@ function EventListPage() {
                       key={item.id}
                       xs={6}
                       md={4}
-                      style={{ marginBottom: 10 }}
+                      style={{ marginBottom: 20 }}
                     >
                       <Card
                         style={{
@@ -509,6 +509,7 @@ function EventListPage() {
                           minHeight: 420,
                           position: "relative",
                         }}
+                        className="pop"
                       >
                         <div style={{ height: 200, position: "relative" }}>
                           <Card.Img
@@ -635,6 +636,7 @@ function EventListPage() {
                   backgroundColor: "#212121",
                   marginTop: 10,
                 }}
+                className="card"
               >
                 <Card.Body style={{ color: "#FBFCFA" }}>
                   <div
