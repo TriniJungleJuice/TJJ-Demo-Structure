@@ -6,6 +6,7 @@ import EventListPageNew from "./screens/EventListPageNew";
 import "slick-carousel/slick/slick.css"; 
 import "slick-carousel/slick/slick-theme.css";
 import EventListPageTiles from "./screens/EventListPageTiles";
+import EventDemoNew from "./screens/EventDemoNew";
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
         <Route path="/">
           <Route element={<EventDetailPage />} path="/event-details" />
           <Route element={<EventDemoPage />} path="/event-demo" />
+          <Route element={<EventDemoNew />} path="/event-demo-new" />
           <Route element={<EventListPage />} path="/event-list" />
           <Route element={<EventListPageNew />} path="/event-list-new" />
           <Route element={<EventListPageTiles />} path="/event-list-tiles" />

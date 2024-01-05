@@ -12,8 +12,14 @@ import Nav from "react-bootstrap/Nav";
 import Navbar from "./Navbar";
 import "react-calendar/dist/Calendar.css";
 import "../../src/styles.css";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {
+  faLocationDot,
+  faCalendar,
+  faDollar
+} from "@fortawesome/free-solid-svg-icons";
 
-export default function EventDemoPage(props) {
+export default function EventDemoNew(props) {
 
   const [calendarValue, onChangeCalendarValue] = useState(new Date());
 
@@ -191,13 +197,12 @@ export default function EventDemoPage(props) {
       <Navbar />
       <div
         id="content"
-        style={{ display: "flex", background: "#000000", padding: 10 }}
+        style={{ display: "flex", background: "#000000", padding: 10,paddingTop:30 }}
       >
         <Container fluid="md">
           <Row>
-            <Col xs={12} md={12}>
-              <Card style={{ backgroundColor: "#212121" }}>
-              <div
+            <Col xs={4} md={4}>
+              {/* <div
                   style={{
                     backgroundImage: `url("https://www.trinijunglejuice.com/events/2024/rise-and-toast-jan14-2024.jpg")`,
                     filter: "blur(8px)",
@@ -206,48 +211,53 @@ export default function EventDemoPage(props) {
                     backgroundSize: "cover",
                     height:400,
                   }}
-                />
-                  <Card.Img
+                /> */}
+                  <Image
                     variant="top"
                     src="https://www.trinijunglejuice.com/events/2024/rise-and-toast-jan14-2024.jpg"
                     style={{
-                      height: 400,
-                      width: "auto",
+                      height: 300,
+                      width: 300,
                       display: "flex",
                       alignSelf: "center",
                       position:"absolute"
                     }}
                   />
-                <Card.Body>
+            </Col>
+            <Col xs={8} md={8}>
                   <Card.Text style={{ paddingLeft: 10, color: "#ffffff" }}>
                     <Row>
-                      <Col xs={10} md={10}>
-                        <Row style={{ fontWeight: "700" }}>
+                        <Row style={{ fontWeight: "700", fontSize: 32,marginLeft:-26 }}>
+                        <Col xs={9} md={9}>
                           Rise and Toast MLK Weekend 2024 hosted by Machel
                           Montano
-                        </Row>
-                        <Row style={{ fontWeight: "500" }}>
-                          Machel Montano hosts RISE + TOAST MLK Weekend
-                        </Row>
-                        <Row>
-                          Sunday January 14th, 2024 (12pm - 9pm) | Price: EC$240
-                        </Row>
-                      </Col>
-                      <Col
-                        xs={2}
-                        md={2}
+                          </Col>
+                          <Col
+                        xs={3}
+                        md={3}
                         style={{
                           display: "flex",
                           alignItems: "center",
                           justifyContent: "flex-end",
                         }}
                       >
-                        <Button
-                          style={{ backgroundColor: "red", borderColor: "red" }}
-                        >
-                          Book Tickets
-                        </Button>
+                        <div className="btns hvr-sweep-to-right">
+                    Buy Tickets
+                  </div>
                       </Col>
+                        </Row>
+                        <Row style={{ fontWeight: "500", color: 'red' }}>
+                          Machel Montano hosts RISE + TOAST MLK Weekend
+                        </Row>
+                        <Row style={{ color: '#9E9E9E' }}>
+                          <Col xs={3} md={3} style={{ marginLeft: -10 }}><FontAwesomeIcon icon={faLocationDot} /> Miami, FL</Col>
+                          <Col xs={7} md={7}><FontAwesomeIcon icon={faCalendar} /> Sunday January 14th, 2024 (12pm - 9pm)</Col>
+                          <Col xs={2} md={2}><FontAwesomeIcon icon={faDollar} /> EC$240</Col>
+                        </Row>
+                        <br/>
+                        <Row>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                        </Row>
                     </Row>
                     <hr className="hr" />
                     <Row style={{ paddingTop: 10 }}>
@@ -269,9 +279,9 @@ export default function EventDemoPage(props) {
                       </span>
                     </Row>
                   </Card.Text>
-                </Card.Body>
-              </Card>
+                
             </Col>
+            
           </Row>
           <Row style={{ marginTop: 10 }}>
             <Col xs={6} md={3}>
@@ -339,60 +349,6 @@ export default function EventDemoPage(props) {
                       }}
                     />
                   </div>
-                </Card.Body>
-              </Card>
-            </Col>
-            <Col xs={6} md={6}>
-              <Card style={{ backgroundColor: "#212121", paddingBottom: 20 }}>
-                <Card.Body style={{ paddingLeft: 20, color: "#ffffff" }}>
-                  <Card.Title>Featured Photos</Card.Title>
-                  <Image
-                    src="https://www.trinijunglejuice.com/home/images/carnival/berlin/berlin_carnival-10.jpg"
-                    width={190}
-                    height={190}
-                    style={{ margin: 2 }}
-                  />
-                  <Image
-                    src="https://www.trinijunglejuice.com/home/images/carnival/berlin/berlin_carnival-2.jpg"
-                    width={190}
-                    height={190}
-                    style={{ margin: 2 }}
-                  />
-                  <Image
-                    src="https://www.trinijunglejuice.com/home/images/carnival/berlin/berlin_carnival-6.jpg"
-                    width={190}
-                    height={190}
-                    style={{ margin: 2 }}
-                  />
-                  <Image
-                    src="https://www.trinijunglejuice.com/home/images/carnival/berlin/berlin_carnival-5.jpg"
-                    width={190}
-                    height={190}
-                    style={{ margin: 2 }}
-                  />
-                  <Image
-                    src="https://www.trinijunglejuice.com/home/images/carnival/berlin/berlin_carnival-1.jpg"
-                    width={190}
-                    height={190}
-                    style={{ margin: 2 }}
-                  />
-                  <Image
-                    src="https://www.trinijunglejuice.com/home/images/carnival/berlin/berlin_carnival-9.jpg"
-                    width={190}
-                    height={190}
-                    style={{ margin: 2 }}
-                  />
-                  {/* <Row style={{ paddingTop: 10 }}>{eventTabs()}</Row> */}
-                </Card.Body>
-                <Card.Body
-                  style={{
-                    paddingLeft: 20,
-                    paddingRight: 30,
-                    color: "#ffffff",
-                  }}
-                >
-                  <Card.Title>Featured Events</Card.Title>
-                  <Row style={{ paddingTop: 10 }}>{eventTabs()}</Row>
                 </Card.Body>
               </Card>
             </Col>
