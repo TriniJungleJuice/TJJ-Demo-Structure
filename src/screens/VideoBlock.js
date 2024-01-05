@@ -5,9 +5,8 @@ import {
   faCartShopping,
 } from "@fortawesome/free-solid-svg-icons";
 
-const VideoBlock = ({ imgSrc }) => {
+const VideoBlock = ({ imgSrc,date,title }) => {
   return (
-    <div>
       <div className="video-block">
         <div className="video-thumb position-relative thumb-overlay">
           <a href="#">
@@ -15,7 +14,7 @@ const VideoBlock = ({ imgSrc }) => {
               alt=""
               src={imgSrc ? imgSrc : "https://www.trinijunglejuice.com/events/2024/rise-and-toast-jan14-2024.jpg"}
               style={{
-                width: "200px",
+                width: "100%",
                 height: "300px",
               }}
             />
@@ -40,14 +39,14 @@ const VideoBlock = ({ imgSrc }) => {
               </li>
             </ul>
           </div>
+          <div className="text-info">
+          <div className="label-text">{date}</div>
         </div>
-      </div>
-      <div className="text-info-block">
-        <div className="text-info-thumb position-relative thumb-overlay">
-          Text Content
         </div>
+        <div className="video-title">
+            <a href="">{title}</a>
+          </div>
       </div>
-    </div>
   );
 };
 
