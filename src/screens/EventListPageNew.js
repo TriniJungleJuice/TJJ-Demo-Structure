@@ -12,7 +12,7 @@ import Slides from "../components/Carousels/Slides";
 function EventListPageNew() {
   const [opened, setOpened] = useState([]);
   const [show, setShow] = React.useState(false);
-  const [calendarValue, onChangeCalendarValue] = useState(new Date());
+  // const [calendarValue, onChangeCalendarValue] = useState(new Date());
 
   const handleClick = (index) => {
     if (opened.includes(index)) {
