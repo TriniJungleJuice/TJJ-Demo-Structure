@@ -9,7 +9,7 @@ import Tab from "react-bootstrap/Tab";
 import Tabs from "react-bootstrap/Tabs";
 import Carousel from "react-bootstrap/Carousel";
 import Nav from "react-bootstrap/Nav";
-import Navbar from "react-bootstrap/Navbar";
+import Navbar from "./Navbar";
 import "react-calendar/dist/Calendar.css";
 import "../../src/styles.css";
 
@@ -216,7 +216,6 @@ export default function EventDemoPage(props) {
   }
 
   return (
-    // <div style={{ height: 'auto', minHeight: '100vh', backgroundColor: '#000000' }}>
     <div
       style={{
         display: "flex",
@@ -225,18 +224,7 @@ export default function EventDemoPage(props) {
         flexDirection: "column",
       }}
     >
-      {/* <div
-        id="header"
-        style={{
-          display: "flex",
-          background: "#E0E0E0",
-          minHeight: "13vh",
-          alignItems: "center",
-          justifyContent: "center",
-        }}
-      > */}
-      {mainNavbar()}
-      {/* </div> */}
+      <Navbar />
       <div
         id="content"
         style={{ display: "flex", background: "#000000", padding: 10 }}
