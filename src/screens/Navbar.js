@@ -3,6 +3,14 @@ import Nav from "react-bootstrap/Nav";
 import {default as BSNavbar} from "react-bootstrap/Navbar";
 import Container from "react-bootstrap/Container";
 import { Image } from "react-bootstrap";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {
+  faCircleInfo,
+  faFilter,
+  faUser,
+  faCartShopping,
+} from "@fortawesome/free-solid-svg-icons";
+
 
 export default function Navbar() {
     return (
@@ -35,6 +43,8 @@ export default function Navbar() {
               <Nav.Link href="#news">News</Nav.Link>
               <Nav.Link href="#contact">Contact</Nav.Link>
             </Nav>
+            <FontAwesomeIcon icon={faFilter} />
+            <FontAwesomeIcon icon={faUser} />
           </Container>
         </BSNavbar>
       </>
