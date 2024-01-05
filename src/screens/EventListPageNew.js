@@ -799,7 +799,33 @@ function EventListPageNew() {
     >
       {mainNavbar()}
       {mainCarousel()}
-      <VideoBlock />
+      <div className="container mt-5 mb-4">
+        <div className="head fadeInUp animated"><h2>Events near you</h2></div>
+        <Row>
+          <Col xs={2} md={2} xl={2}>
+            <VideoBlock
+              imgSrc={
+                "https://www.trinijunglejuice.com/events/2024/rise-and-toast-jan14-2024.jpg"
+              }
+            />
+          </Col>
+          <Col xs={2} md={2} xl={2}>
+            <VideoBlock imgSrc={"http://www.trinijunglejuice.com/events/2023/skn-sugarmas-privates-events-calendar-2023.jpg"} />
+          </Col>
+          <Col xs={2} md={2} xl={2}>
+          <VideoBlock imgSrc={"https://4f14f3f2b2e5fd1c43c0-19fdc616b209d38d8f477bc6e666e66f.ssl.cf1.rackcdn.com/events/gala-vant-midnight-masquerade-272605-pXmvMj6Ngk.jpg"} />
+          </Col>
+          <Col xs={2} md={2} xl={2}>
+          <VideoBlock imgSrc={"http://www.trinijunglejuice.com/events/2023/skn-sugarmas-national-events-calendar-2023.jpg"} />
+          </Col>
+          <Col xs={2} md={2} xl={2}>
+          <VideoBlock imgSrc={"https://4f14f3f2b2e5fd1c43c0-19fdc616b209d38d8f477bc6e666e66f.ssl.cf1.rackcdn.com/events/gala-vant-midnight-masquerade-272605-pXmvMj6Ngk.jpg"} />
+          </Col>
+          <Col xs={2} md={2} xl={2}>
+            <VideoBlock />
+          </Col>
+        </Row>
+      </div>
       <div
         id="content"
         style={{

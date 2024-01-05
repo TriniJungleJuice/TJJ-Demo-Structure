@@ -128,7 +128,7 @@ input:focus {
 }
 
 .slick-bg.bg-1 {
-  background-image: url(./assets/slider/slider1.jpg);
+  background-image: url('http://localhost:58514/images/slider/slider2.jpg');
 }
 
 .slick-bg.bg-2 {

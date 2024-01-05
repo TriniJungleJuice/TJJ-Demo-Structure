@@ -5,7 +5,7 @@ import {
   faCartShopping,
 } from "@fortawesome/free-solid-svg-icons";
 
-const VideoBlock = () => {
+const VideoBlock = ({ imgSrc }) => {
   return (
     <div>
       <div className="video-block">
@@ -13,10 +13,10 @@ const VideoBlock = () => {
           <a href="#">
             <img
               alt=""
-              src="https://www.trinijunglejuice.com/events/2024/rise-and-toast-jan14-2024.jpg"
+              src={imgSrc ? imgSrc : "https://www.trinijunglejuice.com/events/2024/rise-and-toast-jan14-2024.jpg"}
               style={{
-                width: "300px",
-                height: "400px",
+                width: "200px",
+                height: "300px",
               }}
             />
           </a>

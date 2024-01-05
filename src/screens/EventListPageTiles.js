@@ -811,16 +811,17 @@ function EventListPageTiles() {
       <div className="container mt-5 mb-4">
         Events near you
         <Row>
-          <Col xs={3} md={3} xl={3}>
+          <Col xs={2} md={2} xl={2}>
           <VideoBlock />
-          </Col>
-          <Col xs={3} md={3} xl={3}>
+          </Col><Col xs={2} md={2} xl={2}>
           <VideoBlock />
-          </Col>
-          <Col xs={3} md={3} xl={3}>
+          </Col><Col xs={2} md={2} xl={2}>
           <VideoBlock />
-          </Col>
-          <Col xs={3} md={3} xl={3}>
+          </Col><Col xs={2} md={2} xl={2}>
+          <VideoBlock />
+          </Col><Col xs={2} md={2} xl={2}>
+          <VideoBlock />
+          </Col><Col xs={2} md={2} xl={2}>
           <VideoBlock />
           </Col>
         </Row>
