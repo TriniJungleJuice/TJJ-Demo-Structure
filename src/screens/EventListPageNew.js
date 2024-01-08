@@ -5,38 +5,42 @@ import "react-datepicker/dist/react-datepicker.css";
 import "react-datepicker/dist/react-datepicker-cssmodules.css";
 import VideoBlock from "./VideoBlock";
 import MainCarousel from "../components/Carousels/MainCarousel";
-import Navbar from "../components/mainNavbar/Navbar";
+import Navbars from "../components/mainNavbar/Navbars";
 import Footer from "../components/footer/Footer";
 import Slides from "../components/Carousels/Slides";
 
 function EventListPageNew() {
-  const [opened, setOpened] = useState([]);
-  const [show, setShow] = React.useState(false);
-  // const [calendarValue, onChangeCalendarValue] = useState(new Date());
+  const [classes,setClasses]=useState("add-drawer")
 
-  const handleClick = (index) => {
-    if (opened.includes(index)) {
-      for (let i = 0; i < opened.length; i++) {
-        if (opened[i] == index) {
-          opened.splice(i, 1);
-          setShow(!show);
-        }
+  const handleClick=()=>{
+      if(classes==="add-drawer")
+      {
+          setClasses("add-drawer add");
       }
-    } else {
-      setOpened((prev) => [...prev, index]);
-    }
-  };
+
+      else{
+          setClasses("add-drawer");
+      }
+  }
 
   return (
+    <>
     <div
       style={{
         display: "flex",
         width: "100%",
         backgroundColor: "#000000",
         flexDirection: "column",
+        position:"relative",
       }}
     >
-      <Navbar />
+      <Navbars handleClick={()=>handleClick()}/>
+      <div style={{
+        overflowY:classes==="add-drawer add"?"hidden":"auto",
+        opacity:classes==="add-drawer add"?"0.2":"1",
+        transition:"all .3s ease .2s",
+        height:classes==="add-drawer add"?"88vh":"auto",
+      }}>
       <MainCarousel />
       <div className="container mt-5 mb-4">
           <h2 className="block-title">Events near you</h2>
@@ -85,6 +89,9 @@ function EventListPageNew() {
       </div>
       <Footer />
     </div>
+    </div>
+    <div className={classes}/>
+    </>
   );
 }
 

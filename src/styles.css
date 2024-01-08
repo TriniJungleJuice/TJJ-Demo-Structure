@@ -473,3 +473,17 @@ input:focus {
   opacity: 0 !important;
   content: "" !important;
 }
+
+.add-drawer{
+  position: absolute;
+  right: 0;
+  top: 12vh;
+  height: 88vh;
+  background-color: red;
+  width: 0%;
+  transition: all .3s ease .2s;
+  z-index: 2;
+}
+.add-drawer.add{
+  width: 30%;
+}
