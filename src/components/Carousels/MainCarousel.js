@@ -1,11 +1,9 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import Slider from "react-slick";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {
-  faAngleLeft,faAngleRight
-} from "@fortawesome/free-solid-svg-icons";
 
 export default function MainCarousel() {
+  const [width, setWidth] = useState(window.innerWidth);
+
   const slickSliderSettings = {
     dots: false,
     arrows:false,
@@ -17,6 +15,18 @@ export default function MainCarousel() {
     autoplaySpeed: 3000,
     cssEase:"linear",
   };
+
+  useEffect(() => {
+    const handleResize = () => {
+      setWidth(window.innerWidth);
+    };
+
+    window.addEventListener("resize", handleResize);
+
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
   return (
     <>
       <Slider {...slickSliderSettings}>
@@ -24,7 +34,7 @@ export default function MainCarousel() {
           <div
             style={{
               display: "flex",
-              minHeight: "100vh",
+              minHeight: width<420?"40vh":"100vh",
               alignItems: "center",
             }}
             className="slick-bg bg-1"
@@ -35,7 +45,7 @@ export default function MainCarousel() {
                 display: "flex",
                 flexDirection: "column",
                 justifyContent: "center",
-                height: "100vh",
+                height: width<420?"40vh":"100vh",
                 width: "100%",
               }}
             >
@@ -60,11 +70,11 @@ export default function MainCarousel() {
                 <div
                   className="slider-buttons"
                 >
-                  <div className="btns hvr-sweep-to-right">
+                  <div className="btns">
                     Buy Tickets
                   </div>{" "}
                   <div
-                    className="btns hvr-sweep-to-right"
+                    className="btns"
                     style={{ marginLeft: 10 }}
                   >Event Details
                   </div>
@@ -77,7 +87,7 @@ export default function MainCarousel() {
           <div
             style={{
               display: "flex",
-              minHeight: "100vh",
+              minHeight:  width<420?"40vh":"100vh",
               alignItems: "center",
             }}
             className="slick-bg bg-2"
@@ -88,7 +98,7 @@ export default function MainCarousel() {
                 display: "flex",
                 flexDirection: "column",
                 justifyContent: "center",
-                height: "100vh",
+                height:  width<420?"40vh":"100vh",
                 width: "100%",
               }}
             >
@@ -113,11 +123,11 @@ export default function MainCarousel() {
                 <div
                   className="slider-buttons"
                 >
-                  <div className="btns hvr-sweep-to-right">
+                  <div className="btns">
                     Buy Tickets
                   </div>{" "}
                   <div
-                    className="btns hvr-sweep-to-right"
+                    className="btns"
                     style={{ marginLeft: 10 }}
                   >Event Details
                   </div>
@@ -130,7 +140,7 @@ export default function MainCarousel() {
           <div
             style={{
               display: "flex",
-              minHeight: "100vh",
+              minHeight:  width<420?"40vh":"100vh",
               alignItems: "center",
             }}
             className="slick-bg bg-3"
@@ -141,7 +151,7 @@ export default function MainCarousel() {
                 display: "flex",
                 flexDirection: "column",
                 justifyContent: "center",
-                height: "100vh",
+                height:  width<420?"40vh":"100vh",
                 width: "100%",
               }}
             >
@@ -166,11 +176,11 @@ export default function MainCarousel() {
                 <div
                   className="slider-buttons"
                 >
-                  <div className="btns hvr-sweep-to-right">
+                  <div className="btns">
                     Buy Tickets
                   </div>{" "}
                   <div
-                    className="btns hvr-sweep-to-right"
+                    className="btns"
                     style={{ marginLeft: 10 }}
                   >Event Details
                   </div>
