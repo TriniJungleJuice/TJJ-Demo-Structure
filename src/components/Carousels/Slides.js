@@ -14,10 +14,28 @@ export default function Slides() {
     autoplay:true,
     autoplaySpeed: 3000,
     responsive: [
-      {breakpoint: 900,
+      {
+        breakpoint: 1120,
         settings: {
-          slidesToShow: 2,
-          slidesToScroll: 1
+          slidesToShow: 4,
+        }
+      },
+      {
+        breakpoint: 1000,
+        settings: {
+          slidesToShow: 3,
+        }
+      },
+      {
+        breakpoint: 700,
+        settings: {
+          slidesToShow: 2
+        }
+      },
+      {
+        breakpoint: 480,
+        settings: {
+          slidesToShow: 1,
         }
       }
     ]
