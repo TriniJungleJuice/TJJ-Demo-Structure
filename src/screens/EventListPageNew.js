@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import {Col, Row } from "react-bootstrap";
+import { Col, Row } from "react-bootstrap";
 import "../../src/styles.css";
 import "react-datepicker/dist/react-datepicker.css";
 import "react-datepicker/dist/react-datepicker-cssmodules.css";
@@ -39,9 +39,9 @@ function EventListPageNew() {
       <Navbar />
       <MainCarousel />
       <div className="container mt-5 mb-4">
-          <h2 className="block-title">Events near you</h2>
+        <h2 className="block-title">Events near you</h2>
         <Row>
-          <Col xs={2} md={3} xl={3}>
+          <Col xs={6} md={3} xl={3}>
             <VideoBlock
               imgSrc={
                 "https://www.trinijunglejuice.com/events/2024/rise-and-toast-jan14-2024.jpg"
@@ -50,7 +50,7 @@ function EventListPageNew() {
               date={"Sunday, January 14th, 2024"}
             />
           </Col>
-          <Col xs={2} md={3} xl={3}>
+          <Col xs={6} md={3} xl={3}>
             <VideoBlock
               imgSrc={
                 "https://www.trinijunglejuice.com/events/2024/c2k24/mental-vvip-pace-feb7-2024.jpg"
@@ -59,7 +59,7 @@ function EventListPageNew() {
               date={"Wednesday, February 07th, 2024"}
             />
           </Col>
-          <Col xs={2} md={3} xl={3}>
+          <Col xs={6} md={3} xl={3}>
             <VideoBlock
               imgSrc={
                 "https://4f14f3f2b2e5fd1c43c0-19fdc616b209d38d8f477bc6e666e66f.ssl.cf1.rackcdn.com/events/chillout-tuesday-hidden-treasures-2024-272721-c75lh2nriT.jpg"
@@ -68,7 +68,7 @@ function EventListPageNew() {
               date={"Tuesday, February 06th, 2024"}
             />
           </Col>
-          <Col xs={2} md={3} xl={3}>
+          <Col xs={6} md={3} xl={3}>
             <VideoBlock
               imgSrc={
                 "https://www.trinijunglejuice.com/events/2024/c2k24/renaissance-jan27-2024.jpg"
@@ -80,8 +80,8 @@ function EventListPageNew() {
         </Row>
       </div>
       <div className="container mt-5 mb-4">
-          <h2 className="block-title">Popular Events</h2>
-        <Slides/>
+        <h2 className="block-title">Popular Events</h2>
+        <Slides />
       </div>
       <Footer />
     </div>
