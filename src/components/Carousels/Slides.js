@@ -13,6 +13,32 @@ export default function Slides() {
     cssEase:"linear",
     autoplay:true,
     autoplaySpeed: 3000,
+    responsive: [
+      {
+        breakpoint: 1120,
+        settings: {
+          slidesToShow: 4,
+        }
+      },
+      {
+        breakpoint: 1000,
+        settings: {
+          slidesToShow: 3,
+        }
+      },
+      {
+        breakpoint: 700,
+        settings: {
+          slidesToShow: 2
+        }
+      },
+      {
+        breakpoint: 480,
+        settings: {
+          slidesToShow: 1,
+        }
+      }
+    ]
   };
   return (
     <>

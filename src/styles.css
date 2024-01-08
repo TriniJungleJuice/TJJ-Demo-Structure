@@ -445,7 +445,7 @@ input:focus {
 }
 
 .slick-dots{
- bottom: -40px !important;
+ bottom: -30px !important;
 }
 
 .slick-dots li{
@@ -488,8 +488,42 @@ input:focus {
   border-left: 1px solid red;
 }
 
+@media screen and (max-width: 1024px) {
+  .slick-dots li{
+    margin-right: 4px !important;
+    width: 20px !important;
+  }
+  
+  .slick-dots .slick-active button{
+    background-color: red !important; 
+  }
+  
+  .slick-dots li button{
+    width: 20px !important;
+    height: 2px !important;
+    background-color: #869791 !important;
+    border-radius: 5px;
+    padding: 0px !important;
+  }
+}
 @media screen and (max-width: 992px) {
   .add-drawer.add{
     width: 100%;
   } 
+  .slick-dots li{
+    margin-right: 4px !important;
+    width: 16px !important;
+  }
+  
+  .slick-dots .slick-active button{
+    background-color: red !important; 
+  }
+  
+  .slick-dots li button{
+    width: 16px !important;
+    height: 2px !important;
+    background-color: #869791 !important;
+    border-radius: 5px;
+    padding: 0px !important;
+  }
 }
