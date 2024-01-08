@@ -77,7 +77,7 @@ if(isNavExpanded){
       <div className="container mt-5 mb-4">
           <h2 className="block-title">Events near you</h2>
         <Row>
-          <Col xs={2} md={3} xl={3}>
+          <Col xs={12} sm={6} md={4} lg={3}>
             <VideoBlock
               imgSrc={
                 "https://www.trinijunglejuice.com/events/2024/rise-and-toast-jan14-2024.jpg"
@@ -86,7 +86,7 @@ if(isNavExpanded){
               date={"Sunday, January 14th, 2024"}
             />
           </Col>
-          <Col xs={2} md={3} xl={3}>
+          <Col xs={12} sm={6} md={4} lg={3}>
             <VideoBlock
               imgSrc={
                 "https://www.trinijunglejuice.com/events/2024/c2k24/mental-vvip-pace-feb7-2024.jpg"
@@ -95,7 +95,7 @@ if(isNavExpanded){
               date={"Wednesday, February 07th, 2024"}
             />
           </Col>
-          <Col xs={2} md={3} xl={3}>
+          <Col xs={12} sm={6} md={4} lg={3}>
             <VideoBlock
               imgSrc={
                 "https://4f14f3f2b2e5fd1c43c0-19fdc616b209d38d8f477bc6e666e66f.ssl.cf1.rackcdn.com/events/chillout-tuesday-hidden-treasures-2024-272721-c75lh2nriT.jpg"
@@ -104,7 +104,7 @@ if(isNavExpanded){
               date={"Tuesday, February 06th, 2024"}
             />
           </Col>
-          <Col xs={2} md={3} xl={3}>
+          <Col xs={12} sm={6} md={4} lg={3}>
             <VideoBlock
               imgSrc={
                 "https://www.trinijunglejuice.com/events/2024/c2k24/renaissance-jan27-2024.jpg"

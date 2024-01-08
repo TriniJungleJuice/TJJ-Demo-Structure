@@ -527,3 +527,11 @@ input:focus {
     padding: 0px !important;
   }
 }
+
+@media screen and (max-width: 992px) {
+
+  .video-block{
+    margin-bottom: 25px;
+  }
+
+}
