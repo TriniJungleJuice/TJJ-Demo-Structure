@@ -607,5 +607,9 @@ input:focus {
     height: 100%;
 }
 
+.add-mg-bottom{
+  margin-bottom: 25px;
+}
+
   
 }

@@ -12,7 +12,9 @@ import {
   faCalendar,
   faDollar,
   faClock,
-  faGuitar
+  faGuitar,
+  faInfoCircle,
+  faMusic
 } from "@fortawesome/free-solid-svg-icons";
 import NavContainer from "../components/NavContainer/NavContainer";
 
@@ -97,22 +99,25 @@ export default function EventDemoNew() {
                 </Row>
                 <hr className="hr" />
                 <Row style={{ paddingTop: 10 }}>
-                  <Col xs={12} md={4}>
-                    <h4 style={{ color: "red" }}>Timings</h4>
+                  <Col xs={12} md={4} className="add-mg-bottom">
+                    <h4 style={{ color: "red" }}><FontAwesomeIcon icon={faClock} style={{ marginRight: '10px' }}/>Timings</h4>
                     Rise: Brunching - 12pm - 4pm
                     <br />
                     Toast: Social 4pm - 9pm
                   </Col>
-                  <Col xs={12} md={4}>
-                    <h4 style={{ color: "red" }}><FontAwesomeIcon icon={faGuitar} style={{ marginRight: '15px' }}/> Artist</h4>
+                  <Col xs={12} md={4} className="add-mg-bottom">
+                    <h4 style={{ color: "red" }}>
+                    <FontAwesomeIcon icon={faGuitar} style={{ marginRight: '6px' }}/>
+                    {/* <FontAwesomeIcon icon={faMusic} style={{ marginRight: '10px' }}/> */}
+                     Artist</h4>
                     Music by @doctoresan @silentaddy @deiondadj @greg_runway
                     @shadowfyah
                     <br />
                     Special guest @rickyplatinum
                     <br />
                   </Col>
-                  <Col xs={12} md={4}>
-                    <h4 style={{ color: "red" }}>More</h4>
+                  <Col xs={12} md={4} className="add-mg-bottom">
+                    <h4 style={{ color: "red" }}><FontAwesomeIcon icon={faInfoCircle} style={{ marginRight: '10px' }}/>More</h4>
                     Exquisite Cuisine by: @kookinwithkryssi
                     <br />
                     For Cabana and sections: Text (754) 204-3753
