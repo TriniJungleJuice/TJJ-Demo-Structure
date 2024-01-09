@@ -146,7 +146,7 @@ export default function EventDemoNew() {
             <div className="container mt-5 mb-4">
               <h2 className="block-title">Related Events</h2>
               <Row>
-                <Col xs={6} md={3} xl={3}>
+                <Col xs={12} md={6} lg={3} xl={3}>
                   <VideoBlock
                     imgSrc={
                       "https://www.trinijunglejuice.com/events/2024/rise-and-toast-jan14-2024.jpg"
@@ -155,7 +155,7 @@ export default function EventDemoNew() {
                     date={"Sunday, January 14th, 2024"}
                   />
                 </Col>
-                <Col xs={6} md={3} xl={3}>
+                <Col xs={12} md={6} lg={3} xl={3}>
                   <VideoBlock
                     imgSrc={
                       "https://www.trinijunglejuice.com/events/2024/c2k24/mental-vvip-pace-feb7-2024.jpg"
@@ -164,7 +164,7 @@ export default function EventDemoNew() {
                     date={"Wednesday, February 07th, 2024"}
                   />
                 </Col>
-                <Col xs={6} md={3} xl={3}>
+                <Col xs={12} md={6} lg={3} xl={3}>
                   <VideoBlock
                     imgSrc={
                       "https://4f14f3f2b2e5fd1c43c0-19fdc616b209d38d8f477bc6e666e66f.ssl.cf1.rackcdn.com/events/chillout-tuesday-hidden-treasures-2024-272721-c75lh2nriT.jpg"
@@ -173,7 +173,7 @@ export default function EventDemoNew() {
                     date={"Tuesday, February 06th, 2024"}
                   />
                 </Col>
-                <Col xs={6} md={3} xl={3}>
+                <Col xs={12} md={6} lg={3} xl={3}>
                   <VideoBlock
                     imgSrc={
                       "https://www.trinijunglejuice.com/events/2024/c2k24/renaissance-jan27-2024.jpg"
