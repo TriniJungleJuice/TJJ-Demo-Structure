@@ -34,7 +34,7 @@ export default function MainCarousel() {
           <div
             style={{
               display: "flex",
-              minHeight: width<420?"40vh":"100vh",
+              minHeight: width<431?"40vh":"100vh",
               alignItems: "center",
             }}
             className="slick-bg bg-1"
@@ -45,11 +45,11 @@ export default function MainCarousel() {
                 display: "flex",
                 flexDirection: "column",
                 justifyContent: "center",
-                height: width<420?"40vh":"100vh",
+                height: width<431?"40vh":"100vh",
                 width: "100%",
               }}
             >
-              <div style={{ width: "50%", marginLeft: "5%" }}>
+              <div style={{ width:width<431?"60%":"50%", marginLeft: "5%" }}>
                 <h3>
                   <span className="badge bg-warning text-dark">New</span>
                 </h3>
@@ -63,7 +63,7 @@ export default function MainCarousel() {
                   <span>|</span><span>07:00 PM - 12:00 AM</span>
                 </div>
                 <p
-                  className="slide-info"
+                  className={width<431?"slide-info-hide":"slide-info"}
                 >
                   The official after party for Soca Brainwash 'The Western,' catered to those who want a little more party time.This event is walking distance from the festival and will feature some of the best djs and artistes.
                 </p>
@@ -87,7 +87,7 @@ export default function MainCarousel() {
           <div
             style={{
               display: "flex",
-              minHeight:  width<420?"40vh":"100vh",
+              minHeight:  width<431?"40vh":"100vh",
               alignItems: "center",
             }}
             className="slick-bg bg-2"
@@ -98,11 +98,11 @@ export default function MainCarousel() {
                 display: "flex",
                 flexDirection: "column",
                 justifyContent: "center",
-                height:  width<420?"40vh":"100vh",
+                height:  width<431?"40vh":"100vh",
                 width: "100%",
               }}
             >
-              <div style={{ width: "50%", marginLeft: "5%" }}>
+              <div style={{ width:width<431?"60%":"50%", marginLeft: "5%" }}>
                 <h3>
                   <span className="badge bg-warning text-dark">New</span>
                 </h3>
@@ -116,7 +116,7 @@ export default function MainCarousel() {
                   <span>|</span><span>03:00 PM - 10:00 PM</span>
                 </div>
                 <p
-                  className="slide-info"
+                  className={width<431?"slide-info-hide":"slide-info"}
                 >
                   Imagine a J'ouvert festival experience that incorporates all elements into one cultural festival party experience.Imagine being able to experience J'ouvert before going on the road later in the morning.
                 </p>
@@ -140,7 +140,7 @@ export default function MainCarousel() {
           <div
             style={{
               display: "flex",
-              minHeight:  width<420?"40vh":"100vh",
+              minHeight:  width<431?"40vh":"100vh",
               alignItems: "center",
             }}
             className="slick-bg bg-3"
@@ -151,11 +151,11 @@ export default function MainCarousel() {
                 display: "flex",
                 flexDirection: "column",
                 justifyContent: "center",
-                height:  width<420?"40vh":"100vh",
+                height:  width<431?"40vh":"100vh",
                 width: "100%",
               }}
             >
-              <div style={{ width: "50%", marginLeft: "5%" }}>
+              <div style={{ width:width<431?"60%":"50%", marginLeft: "5%" }}>
                 <h3>
                   <span className="badge bg-warning text-dark">New</span>
                 </h3>
@@ -169,7 +169,7 @@ export default function MainCarousel() {
                   <span>|</span><span>01:00 PM - 04:00 PM</span>
                 </div>
                 <p
-                  className="slide-info"
+                  className={width<431?"slide-info-hide":"slide-info"}
                 >
                   The inaugural boatride hosted by Dj Private Ryan that is dedicated to hardcore Soca Lovers.This boatride will feature soca from the 90's 2000's and the present.Get ready to hear music that you haven't heard in years and also music of the present year of soca.
                 </p>

@@ -547,19 +547,19 @@ input:focus {
   }
 }
 
-@media screen and (max-width: 420px) {
+@media screen and (max-width: 430px) {
 
   .badge.bg-warning.text-dark {
-    font-size: 10px;
+    font-size: 12px;
   }
 
   .head {
     margin: 15px 0;
-    font-size: 20px;
+    font-size: 22px;
   }
 
   .slide-info {
-    font-size: 7px;
+    font-size: 10px;
     line-height: 1.5;
     margin-bottom: 15px;
   }
@@ -577,7 +577,7 @@ input:focus {
 
   .btns {
     padding: 4px 10px;
-    font-size: 10px;
+    font-size: 12px;
     line-height: 1.5;
   }
 
@@ -594,6 +594,10 @@ input:focus {
 }
 .add-mg-top-20{
   padding-top: 20px;
+}
+
+.slide-info-hide{
+  display: none;
 }
 
   
