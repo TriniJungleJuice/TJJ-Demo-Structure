@@ -3,7 +3,6 @@ import { Col, Row } from "react-bootstrap";
 import "../../src/styles.css";
 import VideoBlock from "./VideoBlock";
 import MainCarousel from "../components/Carousels/MainCarousel";
-import Footer from "../components/footer/Footer";
 import Slides from "../components/Carousels/Slides";
 import NavContainer from "../components/NavContainer/NavContainer";
 
@@ -66,7 +65,6 @@ function EventListPageNew() {
             <h2 className="block-title">Popular Events</h2>
             <Slides />
           </div>
-          <Footer />
         </NavContainer>
       </div>
     </>

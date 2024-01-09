@@ -9,6 +9,7 @@ import "react-datepicker/dist/react-datepicker.css";
 import "react-datepicker/dist/react-datepicker-cssmodules.css";
 import {Button, Card, Col, Form, Row } from "react-bootstrap";
 import "../../../src/styles.css";
+import Footer from '../footer/Footer';
 
 export default function NavContainer({children}) {
     const [classes,setClasses]=useState("add-drawer")
@@ -60,6 +61,7 @@ export default function NavContainer({children}) {
         height:classes==="add-drawer add"?"88vh":"auto",
       }}>
       {children}
+      <Footer />
       </div>
       <div className={classes}>
     { classes==="add-drawer add" &&
