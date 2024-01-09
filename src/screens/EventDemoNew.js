@@ -107,8 +107,8 @@ export default function EventDemoNew() {
                   </Col>
                   <Col xs={12} md={4} className="add-mg-bottom">
                     <h4 style={{ color: "red" }}>
-                    <FontAwesomeIcon icon={faGuitar} style={{ marginRight: '6px' }}/>
-                    {/* <FontAwesomeIcon icon={faMusic} style={{ marginRight: '10px' }}/> */}
+                    {/* <FontAwesomeIcon icon={faGuitar} style={{ marginRight: '6px' }}/> */}
+                    <FontAwesomeIcon icon={faMusic} style={{ marginRight: '10px' }}/>
                      Artist</h4>
                     Music by @doctoresan @silentaddy @deiondadj @greg_runway
                     @shadowfyah
