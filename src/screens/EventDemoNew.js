@@ -74,11 +74,11 @@ export default function EventDemoNew() {
                   <Col xs={3} md={3}>
                     <FontAwesomeIcon icon={faLocationDot} /> Miami, FL
                   </Col>
-                  <Col xs={7} md={7}>
+                  <Col xs={6} md={7}>
                     <FontAwesomeIcon icon={faCalendar} /> Sunday January 14th,
                     2024 (12pm - 9pm)
                   </Col>
-                  <Col xs={2} md={2}>
+                  <Col xs={3} md={2}>
                     <FontAwesomeIcon icon={faDollar} /> EC$240
                   </Col>
                 </Row>
