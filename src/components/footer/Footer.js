@@ -4,7 +4,6 @@ import { Image, Row, Col, Container } from "react-bootstrap";
 export default function Footer() {
   return (
     <div
-      className="footer-parent"
       style={{
         backgroundColor: "#212121",
         width: "100%",
@@ -12,11 +11,13 @@ export default function Footer() {
         flexDirection: "column",
         paddingLeft: 20,
         paddingRight: 20,
-        marginTop: 30,
+        height:"auto",
+        paddingTop:10,
+        paddingBottom:10
       }}
     >
       <Row style={{ height: "100%" }}>
-        <marquee style={{ color: "red" }}>
+        <marquee style={{ color: "red"}}>
           Disclaimer Notice: TriniJungleJuice.com is not responsible for the
           cancellation, change of date or venue of events. Always check with the
           event promoter(s) for accuracy of the information provided herein. We
@@ -25,16 +26,16 @@ export default function Footer() {
           TriniJungleJuice.com is not affiliated with any promotions or
           promoters, unless specifically stated.
         </marquee>
-        <div className="footer-center-container">
+        <div style={{marginTop:"30px",marginBottom:"30px"}}>
           <Container>
             <Row>
-              <Col xs={12} md={4} lg={4} style={{ display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+              <Col xs={12} md={4} lg={4} className="add-mg-bottom-20" style={{ display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
                 <Image
                   src={require("../../assets/tjj-logo.png")}
                   className="footer-image"
                 />
               </Col>
-              <Col xs={12} md={2} lg={2}>
+              <Col xs={6} md={2} lg={2}>
                 <div
                   style={{
                     display: "flex",
@@ -50,7 +51,7 @@ export default function Footer() {
                   <a href="#">Photos</a>
                 </div>
               </Col>
-              <Col xs={12} md={2} lg={2}>
+              <Col xs={6} md={2} lg={2}>
                 <div
                   style={{
                     display: "flex",
@@ -66,7 +67,7 @@ export default function Footer() {
                   <a href="#">Contact</a>
                 </div>
               </Col>
-              <Col xs={12} md={4} lg={4}>
+              <Col xs={12} md={4} lg={4} className="add-mg-top-20">
                 <div
                   style={{
                     display: "flex",

@@ -496,19 +496,6 @@ input:focus {
   border-left: 1px solid red;
 }
 
-.footer-parent {
-  padding-top: 10px;
-  padding-bottom: 10px;
-  height: 35vh;
-}
-
-.footer-center-container {
-  display: flex;
-  height: 70%;
-  flex-direction: row;
-  align-items: center;
-}
-
 .footer-image {
     width: 70%;
     height: 80%;
@@ -594,14 +581,6 @@ input:focus {
     line-height: 1.5;
   }
 
-  .footer-parent {
-    height: 75vh;
-  }
-
-  .footer-center-container {
-    height: 80%;
-  }
-
   .footer-image {
     width: 80%;
     height: 100%;
@@ -609,6 +588,12 @@ input:focus {
 
 .add-mg-bottom{
   margin-bottom: 25px;
+}
+.add-mg-bottom-20{
+  margin-bottom: 20px;
+}
+.add-mg-top-20{
+  padding-top: 20px;
 }
 
   
