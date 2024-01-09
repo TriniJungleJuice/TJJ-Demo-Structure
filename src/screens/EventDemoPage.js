@@ -8,79 +8,13 @@ import Calendar from "react-calendar";
 import Tab from "react-bootstrap/Tab";
 import Tabs from "react-bootstrap/Tabs";
 import Carousel from "react-bootstrap/Carousel";
-import Nav from "react-bootstrap/Nav";
-import Navbar from "./Navbar";
 import "react-calendar/dist/Calendar.css";
 import "../../src/styles.css";
+import NavContainer from "../components/NavContainer/NavContainer";
 
 export default function EventDemoPage(props) {
 
   const [calendarValue, onChangeCalendarValue] = useState(new Date());
-
-  function footer() {
-    return (
-      <div
-        style={{
-          height: "35vh",
-          backgroundColor: "#212121",
-          width: "100%",
-          display: "flex",
-          flexDirection: "column",
-          paddingLeft: 20,
-          paddingRight: 20,
-        }}
-      >
-        <div
-          style={{
-            display: "flex",
-            height: "15%",
-            color: "blue",
-            // backgroundColor: "yellow",
-            alignItems: "center",
-          }}
-        >
-           <marquee style={{ color: 'red' }}>
-           Disclaimer Notice: TriniJungleJuice.com is not responsible for the
-            cancellation, change of date or venue of events. Always check with
-            the event promoter(s) for accuracy of the information provided
-            herein. We are not responsible for typos, accuracy, and/or other
-            errors and omissions in the information provided by other parties.
-            TriniJungleJuice.com is not affiliated with any promotions or
-            promoters, unless specifically stated.
-            </marquee>
-        </div>
-        <div style={{ display: 'flex', height: "70%", flexDirection: 'row' }}>
-          <div style={{ display: 'flex', width: "33%", flexDirection: 'column', justifyContent: 'center', alignItems: 'center' }}>
-          <Image
-                src={require('../assets/tjj-logo.png')}
-                // width={200}
-                // height={55.8}
-              />
-          </div>
-          <div style={{ display: 'flex', width: "33%", flexDirection: 'row' }}>
-          <div style={{ display: 'flex', width: "50%", flexDirection: 'column', justifyContent:'center',alignItems: 'center' }}>
-            <a href="#">Store</a>
-            <a href="#">Carnival</a>
-            <a href="#">Events</a>
-            <a href="#">Photos</a>
-          </div>
-          <div style={{ display: 'flex', width: "50%", flexDirection: 'column', justifyContent:'center',alignItems: 'center' }}>
-          <a href="#">Videos</a>
-            <a href="#">Music</a>
-            <a href="#">News</a>
-            <a href="#">Contact</a>
-          </div>
-          </div>
-          <div style={{ display: 'flex', width: "34%", color: 'white', flexDirection: 'column', justifyContent:'center',alignItems: 'center' }}>
-            221B, Baker Street, 90265
-          </div>
-        </div>
-        <div style={{ display: 'flex', height: "15%", color: 'gray', justifyContent: 'center', alignItems: 'center' }}>
-          {'\u00A9'} 2023 Copyright: Trini Jungle Juice | Made by Renderbit Technologies
-        </div>
-      </div>
-    );
-  }
 
   function eventCard() {
     return (
@@ -188,7 +122,7 @@ export default function EventDemoPage(props) {
         flexDirection: "column",
       }}
     >
-      <Navbar />
+      <NavContainer >
       <div
         id="content"
         style={{ display: "flex", background: "#000000", padding: 10 }}
@@ -453,19 +387,7 @@ export default function EventDemoPage(props) {
           </Row>
         </Container>
       </div>
-      {footer()}
-      {/* <div
-        id="footer"
-        style={{
-          display: "flex",
-          background: "#E0E0E0",
-          minHeight: "13vh",
-          alignItems: "center",
-          justifyContent: "center",
-        }}
-      >
-        2023 Trini Jungle Juice | Designed by Renderbit Technologies
-      </div> */}
+    </NavContainer>
     </div>
   );
 }
