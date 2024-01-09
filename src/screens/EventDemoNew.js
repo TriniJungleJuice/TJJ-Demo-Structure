@@ -54,11 +54,11 @@ export default function EventDemoNew() {
             <Col xs={12} md={9}>
               <Card.Text style={{ color: "#ffffff" }}>
                 <Row style={{ fontWeight: "700", fontSize: 32 }}>
-                  <Col xs={9} md={9}>
+                  <Col xs={12} md={9} className="add-mg-bottom-20">
                     Rise and Toast MLK Weekend 2024 hosted by Machel Montano
                   </Col>
                   <Col
-                    xs={3}
+                    xs={12}
                     md={3}
                     style={{
                       display: "flex",
@@ -66,21 +66,21 @@ export default function EventDemoNew() {
                       justifyContent: "flex-end",
                     }}
                   >
-                    <div className="btns hvr-sweep-to-right">Buy Tickets</div>
+                    <div className="btns">Buy Tickets</div>
                   </Col>
                 </Row>
                 <Row style={{ fontWeight: "500", color: "red", marginTop: 15 }}>
                   <Col>Machel Montano hosts RISE + TOAST MLK Weekend</Col>
                 </Row>
                 <Row style={{ color: "#9E9E9E", marginTop: 15 }}>
-                  <Col xs={3} md={3}>
+                  <Col xs={12} md={3} className="add-mg-bottom-10">
                     <FontAwesomeIcon icon={faLocationDot} /> Miami, FL
                   </Col>
-                  <Col xs={6} md={7}>
+                  <Col xs={12} md={7} className="add-mg-bottom-10">
                     <FontAwesomeIcon icon={faCalendar} /> Sunday January 14th,
                     2024 (12pm - 9pm)
                   </Col>
-                  <Col xs={3} md={2}>
+                  <Col xs={12} md={2} className="add-mg-bottom-10">
                     <FontAwesomeIcon icon={faDollar} /> EC$240
                   </Col>
                 </Row>

@@ -577,7 +577,7 @@ input:focus {
 
   .btns {
     padding: 4px 10px;
-    font-size: 12px;
+    font-size: 14px;
     line-height: 1.5;
   }
 
@@ -591,6 +591,9 @@ input:focus {
 }
 .add-mg-bottom-20{
   margin-bottom: 20px;
+}
+.add-mg-bottom-10{
+  margin-bottom: 10px;
 }
 .add-mg-top-20{
   padding-top: 20px;
