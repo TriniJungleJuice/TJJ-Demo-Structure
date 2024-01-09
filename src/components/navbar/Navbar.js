@@ -5,7 +5,7 @@ import { Container, Image } from "react-bootstrap";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faFilter, faUser } from "@fortawesome/free-solid-svg-icons";
 
-export default function Navbars({ handleClick, handleNavExpanded }) {
+export default function Navbar({ handleClick, handleNavExpanded }) {
   const [isNavExpanded, setIsNavExpanded] = useState(false);
   const [width, setWidth] = useState(window.innerWidth);
 

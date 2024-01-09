@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import Navbars from '../mainNavbar/Navbars';
+import Navbar from '../navbar/Navbar';
 import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
 import "react-datepicker/dist/react-datepicker-cssmodules.css";
@@ -53,7 +53,7 @@ export default function NavContainer({children}) {
     }
   return (
     <div>
-      <Navbars handleClick={()=>handleAddClass()} handleNavExpanded={(val)=>handleNavExpanded(val)}/>
+      <Navbar handleClick={()=>handleAddClass()} handleNavExpanded={(val)=>handleNavExpanded(val)}/>
       <div style={{
         overflowY:classes==="add-drawer add"?"hidden":"auto",
         opacity:classes==="add-drawer add"?"0.2":"1",
