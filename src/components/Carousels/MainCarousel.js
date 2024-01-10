@@ -49,7 +49,7 @@ export default function MainCarousel() {
                 width: "100%",
               }}
             >
-              <div style={{ width:width<431?"60%":"50%", marginLeft: "5%" }}>
+              <div style={{ width:width<431?"100%":"50%", marginLeft: "5%" }}>
                 <h3>
                   <span className="badge bg-warning text-dark">New</span>
                 </h3>
@@ -102,7 +102,7 @@ export default function MainCarousel() {
                 width: "100%",
               }}
             >
-              <div style={{ width:width<431?"60%":"50%", marginLeft: "5%" }}>
+              <div style={{ width:width<431?"100%":"50%", marginLeft: "5%" }}>
                 <h3>
                   <span className="badge bg-warning text-dark">New</span>
                 </h3>
@@ -155,7 +155,7 @@ export default function MainCarousel() {
                 width: "100%",
               }}
             >
-              <div style={{ width:width<431?"60%":"50%", marginLeft: "5%" }}>
+              <div style={{ width:width<431?"100%":"50%", marginLeft: "5%" }}>
                 <h3>
                   <span className="badge bg-warning text-dark">New</span>
                 </h3>

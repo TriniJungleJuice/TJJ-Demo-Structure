@@ -550,16 +550,16 @@ input:focus {
 @media screen and (max-width: 430px) {
 
   .badge.bg-warning.text-dark {
-    font-size: 12px;
+    font-size: 14px;
   }
 
   .head {
     margin: 15px 0;
-    font-size: 22px;
+    font-size: 26px;
   }
 
   .slide-info {
-    font-size: 10px;
+    font-size: 13px;
     line-height: 1.5;
     margin-bottom: 15px;
   }
@@ -576,8 +576,8 @@ input:focus {
   }
 
   .btns {
-    padding: 4px 10px;
-    font-size: 14px;
+    padding: 6px 12px;
+    font-size: 15px;
     line-height: 1.5;
   }
 
@@ -603,5 +603,8 @@ input:focus {
   display: none;
 }
 
+.carousel-slider-box {
+  background: linear-gradient(to right, rgb(0, 0, 0) 30%, transparent);
+}
   
 }
